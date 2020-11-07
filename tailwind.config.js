@@ -1,5 +1,7 @@
 module.exports = {
-  future: {},
+  future: {
+    defaultLineHeights: true,
+  },
   purge: [
     'src/**/*.js',
     'src/**/*.css'
