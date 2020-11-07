@@ -1,9 +1,9 @@
 ---
 date: 2019-01-04
-title: "Search Engine Optimization with Gatsby"
+title: 'Search Engine Optimization with Gatsby'
 author: Dustin Schau
 featured: images/seo.jpg
-excerpt: "SEO and Gatsby: A Perfect Pairing. Learn how Gatsby implements SEO utilizing React Helmet and smart defaults and how you can use these tools to implement your own!"
+excerpt: 'SEO and Gatsby: A Perfect Pairing. Learn how Gatsby implements SEO utilizing React Helmet and smart defaults and how you can use these tools to implement your own!'
 tags:
   - gatsby
   - javascript
@@ -60,10 +60,10 @@ Using the power and flexibility of React, we can create a React component to pow
 > If you're not using those: [follow this guide for installation instructions][gatsby-plugin-react-helmet]
 
 ```jsx:title=src/components/seo.js
-import React from "react";
+import React from 'react';
 // highlight-start
-import Helmet from "react-helmet";
-import { StaticQuery, graphql } from "gatsby";
+import Helmet from 'react-helmet';
+import { StaticQuery, graphql } from 'gatsby';
 // highlight-end
 
 function SEO() {
@@ -82,7 +82,7 @@ function SEO() {
         }
         # highlight-end
       `}
-      render={data => null}
+      render={(data) => null}
     />
   );
 }
@@ -95,9 +95,9 @@ This component doesn't _do_ anything yet, but we're laying the foundation for a 
 The `StaticQuery` component accepts a render prop, and at this point, we're simply returning `null` to render nothing. Let's _actually_ render something and build out our prototype for this SEO component. Let's iterate further.
 
 ```jsx:title=src/components/seo.js
-import React from "react";
-import Helmet from "react-helmet";
-import { StaticQuery, graphql } from "gatsby";
+import React from 'react';
+import Helmet from 'react-helmet';
+import { StaticQuery, graphql } from 'gatsby';
 
 function SEO() {
   return (
@@ -113,18 +113,18 @@ function SEO() {
           }
         }
       `}
-      render={data => (
+      render={(data) => (
         <Helmet
           htmlAttributes={{
-            lang: "en"
+            lang: 'en',
           }}
           meta={
             // highlight-start
             [
               {
-                name: "description",
-                content: data.site.siteMetadata.description
-              }
+                name: 'description',
+                content: data.site.siteMetadata.description,
+              },
             ]
             // highlight-end
           }
@@ -152,10 +152,10 @@ In addition to SEO for actual _search_ engines we also want those pretty cards t
 Let's implement it 👌
 
 ```jsx:title=src/components/seo.js
-import React from "react";
-import Helmet from "react-helmet";
-import PropTypes from "prop-types"; // highlight-line
-import { StaticQuery, graphql } from "gatsby";
+import React from 'react';
+import Helmet from 'react-helmet';
+import PropTypes from 'prop-types'; // highlight-line
+import { StaticQuery, graphql } from 'gatsby';
 
 // highlight-next-line
 function SEO({ description, meta, image: metaImage, title }) {
@@ -173,7 +173,7 @@ function SEO({ description, meta, image: metaImage, title }) {
           }
         }
       `}
-      render={data => {
+      render={(data) => {
         // highlight-start
         const metaDescription =
           description || data.site.siteMetadata.description;
@@ -185,66 +185,66 @@ function SEO({ description, meta, image: metaImage, title }) {
         return (
           <Helmet
             htmlAttributes={{
-              lang: "en"
+              lang: 'en',
             }}
             title={title}
             meta={
               [
                 {
-                  name: "description",
-                  content: metaDescription
+                  name: 'description',
+                  content: metaDescription,
                 },
                 {
-                  name: "keywords",
-                  content: data.site.siteMetadata.keywords.join(",")
+                  name: 'keywords',
+                  content: data.site.siteMetadata.keywords.join(','),
                 },
                 // highlight-start
                 {
-                  property: "og:title",
-                  content: title
+                  property: 'og:title',
+                  content: title,
                 },
                 {
-                  property: "og:description",
-                  content: metaDescription
+                  property: 'og:description',
+                  content: metaDescription,
                 },
                 {
-                  name: "twitter:creator",
-                  content: data.site.siteMetadata.author
+                  name: 'twitter:creator',
+                  content: data.site.siteMetadata.author,
                 },
                 {
-                  name: "twitter:title",
-                  content: title
+                  name: 'twitter:title',
+                  content: title,
                 },
                 {
-                  name: "twitter:description",
-                  content: metaDescription
-                }
+                  name: 'twitter:description',
+                  content: metaDescription,
+                },
               ]
                 .concat(
                   metaImage
                     ? [
                         {
-                          property: "og:image",
-                          content: image
+                          property: 'og:image',
+                          content: image,
                         },
                         {
-                          property: "og:image:width",
-                          content: metaImage.width
+                          property: 'og:image:width',
+                          content: metaImage.width,
                         },
                         {
-                          property: "og:image:height",
-                          content: metaImage.height
+                          property: 'og:image:height',
+                          content: metaImage.height,
                         },
                         {
-                          name: "twitter:card",
-                          content: "summary_large_image"
-                        }
+                          name: 'twitter:card',
+                          content: 'summary_large_image',
+                        },
                       ]
                     : [
                         {
-                          name: "twitter:card",
-                          content: "summary"
-                        }
+                          name: 'twitter:card',
+                          content: 'summary',
+                        },
                       ]
                 )
                 .concat(meta)
@@ -259,7 +259,7 @@ function SEO({ description, meta, image: metaImage, title }) {
 
 // highlight-start
 SEO.defaultProps = {
-  meta: []
+  meta: [],
 };
 // highlight-end
 
@@ -269,10 +269,10 @@ SEO.propTypes = {
   image: PropTypes.shape({
     src: PropTypes.string.isRequired(),
     height: PropTypes.string.isRequired(),
-    width: PropTypes.string.isRequired()
+    width: PropTypes.string.isRequired(),
   }),
   meta: PropTypes.array,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 };
 // highlight-end
 
@@ -290,10 +290,10 @@ We now have our extensible SEO component. It takes a `title` prop, and then (opt
 ### In a page component
 
 ```jsx:title=src/pages/index.js
-import React from "react";
+import React from 'react';
 
-import Layout from "../components/layout";
-import SEO from "../components/seo"; // highlight-line
+import Layout from '../components/layout';
+import SEO from '../components/seo'; // highlight-line
 
 function Index() {
   return (

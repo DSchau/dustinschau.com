@@ -1,20 +1,20 @@
-import React from 'react'
+import React from 'react';
 
 function useMatchMedia(matcher) {
-  const [matches, setMatches] = React.useState(false)
+  const [matches, setMatches] = React.useState(false);
   React.useEffect(() => {
-    const listener = window.matchMedia(matcher)
+    const listener = window.matchMedia(matcher);
 
     const ev = () => {
-      setMatches(listener.matches)
-    }
+      setMatches(listener.matches);
+    };
 
-    listener.addEventListener('change', ev)
+    listener.addEventListener('change', ev);
 
-    return () => window.removeEventListener('change', ev)
-  }, [matcher])
+    return () => window.removeEventListener('change', ev);
+  }, [matcher]);
 
-  return matches
+  return matches;
 }
 
-export default useMatchMedia
+export default useMatchMedia;

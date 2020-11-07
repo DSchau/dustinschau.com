@@ -1,8 +1,8 @@
-const path = require('path')
+const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: `Dustin Schau`
+    title: `Dustin Schau`,
   },
   plugins: [
     'gatsby-plugin-sharp',
@@ -11,15 +11,15 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: 'blog',
-        path: path.join(__dirname, 'content', 'blog')
-      }
+        path: path.join(__dirname, 'content', 'blog'),
+      },
     },
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
         extensions: ['.md', '.mdx'],
         remarkPlugins: [
-          require('remark-unwrap-images') // god damn this is annoying
+          require('remark-unwrap-images'), // god damn this is annoying
         ],
         gatsbyRemarkPlugins: [
           {
@@ -28,11 +28,11 @@ module.exports = {
               maxWidth: 1200,
             },
           },
-        ]
-      }
+        ],
+      },
     },
     {
-      resolve: 'gatsby-plugin-postcss'
-    }
-  ]
-}
+      resolve: 'gatsby-plugin-postcss',
+    },
+  ],
+};

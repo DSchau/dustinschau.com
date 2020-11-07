@@ -14,7 +14,8 @@
   grid-column: 2;
 }
 
-:global(.post > .gatsby-resp-image-wrapper), :global(.post > .full-width-image) {
+:global(.post > .gatsby-resp-image-wrapper),
+:global(.post > .full-width-image) {
   width: 100%;
   grid-column: 1 / 4;
   margin: 2rem auto;

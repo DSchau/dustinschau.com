@@ -1,6 +1,6 @@
 ---
 date: 2018-06-10T17:15:34.619Z
-title: "GraphQL: Most of the Parts"
+title: 'GraphQL: Most of the Parts'
 tags:
   - graphql
   - react

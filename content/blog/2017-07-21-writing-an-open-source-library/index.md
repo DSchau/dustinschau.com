@@ -23,7 +23,7 @@ It can be incredibly difficult to keep up with the seemingly nebulous and always
 While working on a Gatsby PR (see [this blog post][getting-started-with-gatsby] for more about Gatsby), I gained some exposure to the [Remark library][remark] library, which has the ability to transform a Markdown document into an abstract syntax tree--hereafter referred to as an AST. The general approach is given a Markdown file, we can parse it into an AST of nodes (e.g. code nodes, image nodes, text nodes, etc.), modify these nodes, and then write back to the original Markdown file. Pretty cool! I tend to think looking at code is helpful, so let's consider the following snippet:
 
 ```javascript
-const Remark = require("remark");
+const Remark = require('remark');
 
 const ast = remark().parse(`
 # hello world

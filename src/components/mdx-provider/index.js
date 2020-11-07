@@ -1,1 +1,1 @@
-export * from './mdx-provider'
+export * from './mdx-provider';

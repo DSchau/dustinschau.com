@@ -58,9 +58,9 @@ After installing each of these functional plugins, we'll edit `gatsby-config.js`
 module.exports = {
   siteMetadata: {
     title: `Your Name - Blog`,
-    author: `Your Name`
+    author: `Your Name`,
   },
-  plugins: ["gatsby-plugin-catch-links", "gatsby-plugin-react-helmet"]
+  plugins: ['gatsby-plugin-catch-links', 'gatsby-plugin-react-helmet'],
 };
 ```
 
@@ -80,16 +80,16 @@ yarn add gatsby-source-filesystem
 module.exports = {
   // previous configuration
   plugins: [
-    "gatsby-plugin-catch-links",
-    "gatsby-plugin-react-helmet",
+    'gatsby-plugin-catch-links',
+    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
-        name: "pages"
-      }
-    }
-  ]
+        name: 'pages',
+      },
+    },
+  ],
 };
 ```
 
@@ -116,22 +116,22 @@ and editing `gatsby-config.js`
 module.exports = {
   // previous setup
   plugins: [
-    "gatsby-plugin-catch-links",
-    "gatsby-plugin-react-helmet",
+    'gatsby-plugin-catch-links',
+    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
-        name: "pages"
-      }
+        name: 'pages',
+      },
     },
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: [] // just in case those previously mentioned remark plugins sound cool :)
-      }
-    }
-  ]
+        plugins: [], // just in case those previously mentioned remark plugins sound cool :)
+      },
+    },
+  ],
 };
 ```
 
@@ -147,9 +147,9 @@ The content of this Markdown file will be our blog post, authored in Markdown (o
 
 ```markdown
 ---
-path: "/hello-world"
+path: '/hello-world'
 date: 2017-07-12T17:12:33.962Z
-title: "My First Gatsby Post"
+title: 'My First Gatsby Post'
 ---
 
 Oooooh-weeee, my first blog post!
@@ -166,13 +166,13 @@ As Gatsby supports server side rendering (to string) of React components, we can
 We'll want to create the file `src/templates/blog-post.js` (please create the `src/templates` folder if it does not yet exist!).
 
 ```javascript
-import React from "react";
-import Helmet from "react-helmet";
+import React from 'react';
+import Helmet from 'react-helmet';
 
 // import '../css/blog-post.css'; // make it pretty!
 
 export default function Template({
-  data // this prop will be injected by the GraphQL query we'll write in a bit
+  data, // this prop will be injected by the GraphQL query we'll write in a bit
 }) {
   const { markdownRemark: post } = data; // data.markdownRemark holds our post data
   return (
@@ -199,8 +199,8 @@ At this point, there is a reasonable level of confusion and "magic" occuring, pa
 Below the `Template` declaration, we'll want to add a GraphQL query. This is an incredibly powerful utility provided by Gatsby which lets us pick and choose very simply the pieces of data that we want to display for our blog post. Each piece of data our query selects will be injected via the `data` property we specified earlier.
 
 ```javascript{24-35}
-import React from "react";
-import Helmet from "react-helmet";
+import React from 'react';
+import Helmet from 'react-helmet';
 
 // import '../css/blog-post.css';
 
@@ -253,7 +253,7 @@ An important note to make at this point is that the GraphQL query takes place at
 Gatsby exposes a powerful Node API, which allows for functionality such as creating dynamic pages (blog posts!), extending the babel or webpack configs, modifying the created nodes or pages, etc. This API is exposed in the `gatsby-node.js` file in the root directory of your project--e.g. at the same level as `gatsby-config.js`. Each export found in this file will be parsed by Gatsby, as detailed in its [Node API specification][node-spec]. However, we only care about one particular API in this instance, `createPages`.
 
 ```javascript
-const path = require("path");
+const path = require('path');
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
@@ -267,7 +267,7 @@ Nothing super complex yet! We're using the `createPages` API (which Gatsby will 
 ### Querying for posts
 
 ```javascript{8-31}
-const path = require("path");
+const path = require('path');
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
@@ -294,7 +294,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     if (result.errors) {
       return Promise.reject(result.errors);
     }
@@ -311,7 +311,7 @@ We now have our query written, but we haven't yet programatically created the pa
 ### Creating the pages
 
 ```javascript{32-36}
-const path = require("path");
+const path = require('path');
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
@@ -338,7 +338,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     if (result.errors) {
       return Promise.reject(result.errors);
     }
@@ -347,7 +347,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       createPage({
         path: node.frontmatter.path,
         component: blogPostTemplate,
-        context: {} // additional data can be passed via context
+        context: {}, // additional data can be passed via context
       });
     });
   });
@@ -371,9 +371,9 @@ I won't go into quite as much detail for this section, because we've already don
 Gatsby has a standard for "listing pages," and they're placed in the root of our filesystem we specified in `gatsby-source-filesystem`, e.g. `src/pages/index.js`. So create that file if it does not exist, and let's get it working! Additionally note that any static JavaScript files (that export a React component!) will get a corresponding static HTML file. For instance, if we create `src/pages/tags.js`, the path `http://localhost:8000/tags/` will be available within the browser and the statically generated site.
 
 ```javascript
-import React from "react";
-import Link from "gatsby-link";
-import Helmet from "react-helmet";
+import React from 'react';
+import Link from 'gatsby-link';
+import Helmet from 'react-helmet';
 
 // import '../css/index.css'; // add some style if you want!
 
@@ -382,7 +382,7 @@ export default function Index({ data }) {
   return (
     <div className="blog-posts">
       {posts
-        .filter(post => post.node.frontmatter.title.length > 0)
+        .filter((post) => post.node.frontmatter.title.length > 0)
         .map(({ node: post }) => {
           return (
             <div className="blog-post-preview" key={post.id}>
