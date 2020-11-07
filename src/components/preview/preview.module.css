@@ -1,0 +1,15 @@
+.container {
+  padding: theme('spacing.2');
+  margin: 0 auto;
+  max-width: min(65ch, 100%);
+}
+
+.title {
+  font-size: theme('fontSize.xl');
+}
+
+.title > a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-skip: ink;
+}

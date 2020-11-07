@@ -1,18 +1,18 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 
-import Layout from '../../components/layout'
+import { Layout } from '../../components/layout/'
+import { Preview } from '../../components/preview/'
 
 export default ({ data }) => (
   <Layout>
-    <h2>The Blog</h2>
-    {
-      data.posts.nodes.map(post => (
-      <article>
-        <h3><Link to={post.slug}>{post.frontmatter.title}</Link></h3>
-      </article>
-      ))
-    }
+    <div className="grid lg:grid-cols-2">
+      {
+        data.posts.nodes.map(post => (
+          <Preview key={post.id} {...post} />
+        ))
+      }
+    </div>
   </Layout>
 )
 
@@ -20,7 +20,10 @@ export const query = graphql`
   {
     posts: allMdx {
       nodes {
-        slug: gatsbyPath(filePath: "/blog/{Mdx.parent__(File)__name}")
+        id
+        excerpt
+        slug
+        # slug: gatsbyPath(filePath: "/blog/{Mdx.slug}")
         frontmatter {
           title
         }

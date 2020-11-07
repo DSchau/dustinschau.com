@@ -1,0 +1,21 @@
+.container {
+  position: relative;
+  margin: theme('p.5');
+}
+
+.pre {
+  background-color: #282A36;
+  overflow-x: scroll;
+}
+
+.copy {
+  color: theme('colors.white');
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  border-radius: 4px;
+}
+
+.title {
+
+}

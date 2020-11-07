@@ -1,1 +1,1 @@
-import './src/components/layout.css'
+import './src/components/layout/layout.css'
