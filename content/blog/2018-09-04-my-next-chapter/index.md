@@ -10,8 +10,6 @@ tags:
   - object partners
 ---
 
-![My next chapter](./images/my-next-chapter.jpg)
-
 _(Pretend that's me and not Kevin Durant)_
 
 I'm incredibly excited to announce that I've accepted a role with Gatsby Inc. working on an awesome static-site generator for React--although anyone who follows me on Twitter knows I think it's so much more 😅.

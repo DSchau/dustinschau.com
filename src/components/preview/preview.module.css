@@ -13,3 +13,8 @@
   text-decoration: underline;
   text-decoration-skip: ink;
 }
+
+.featured {
+  height: 200px;
+  overflow: hidden;
+}
