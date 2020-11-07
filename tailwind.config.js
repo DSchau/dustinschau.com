@@ -1,6 +1,9 @@
 module.exports = {
   future: {},
-  purge: [],
+  purge: [
+    'src/**/*.js',
+    'src/**/*.css'
+  ],
   theme: {
     extend: {},
   },
