@@ -1,30 +1,11 @@
 .button {
   background-color: transparent;
   border: none;
+  color: theme('color.white');
+  font-size: theme('fontSize.xs');
+  font-family: theme('font.sans'); /* TODO: validate */
 }
 
-/*
-        backgroundColor: `transparent`,
-        border: `none`,
-        color: `code.copyButton`,
-        cursor: `pointer`,
-        fontSize: 0,
-        fontFamily: `sans`,
-        lineHeight: `solid`,
-        p: t => (isGatsbyInterfaceTheme(t) ? t.space[3] : t.space[2]),
-        transition: t =>
-          isGatsbyInterfaceTheme(t)
-            ? t.transitions.default
-            : t.transition.default,
-        "&[disabled]": {
-          cursor: `not-allowed`,
-        },
-        ":not([disabled]):hover": {
-          bg: `purple.60`,
-          boxShadow: `raised`,
-          color: `white`,
-        },
-        ":active": {
-          boxShadow: `floating`,
-        },
-*/
+.button[disabled] {
+  cursor: not-allowed;
+}
