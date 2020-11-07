@@ -54,6 +54,11 @@ export function Header({ compressed = true }) {
             <span className={styles.lastName}>Schau</span>
           </Link>
         </h1>
+
+        <h2 className={styles.subTitle}>
+          Product Leader <span className={styles.ampersand}>&amp;</span>{' '}
+          Engineer
+        </h2>
       </span>
     </header>
   );

@@ -46,3 +46,24 @@
 
 .lastName {
 }
+
+.sub-title {
+  position: absolute;
+  bottom: theme('spacing.2');
+  padding: theme('spacing.2');
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  text-align: center;
+  background-color: theme('colors.white');
+  color: theme('colors.gray.900');
+  font-size: theme('fontSize.lg');
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.ampersand {
+  font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
+  font-style: italic;
+  font-weight: normal;
+}

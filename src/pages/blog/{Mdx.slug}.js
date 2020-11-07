@@ -9,7 +9,7 @@ import { MDXProvider } from '../../components/mdx-provider';
 import styles from './blog-post.module.css';
 
 export default ({ data }) => (
-  <Layout skipNavigation={false}>
+  <Layout customSkipNavigation={true}>
     <article className={`${styles.post} post`}>
       {data.mdx.frontmatter.featured && (
         <Image

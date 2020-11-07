@@ -4,8 +4,8 @@ import { SkipNavLink, SkipNavContent } from '@reach/skip-nav';
 
 import { Header } from '../header/';
 
-export function Layout({ children, compressed, skipNavigation = true }) {
-  const Wrapper = skipNavigation ? SkipNavContent : React.Fragment;
+export function Layout({ children, compressed, customSkipNavigation = false }) {
+  const Wrapper = customSkipNavigation ? React.Fragment : SkipNavContent;
   return (
     <main>
       <Helmet title="Dustin Schau" />
