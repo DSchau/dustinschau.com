@@ -20,7 +20,7 @@ const getParticlesConfig = (particlesConfig, options) => {
   return config;
 };
 
-export function Header({ compressed = true }) {
+export function Header({ compressed = true, children }) {
   const prefersReducedMotion = useMatchMedia(
     '(prefers-reduced-motion: reduce)'
   );
@@ -64,6 +64,7 @@ export function Header({ compressed = true }) {
           </h2>
         )}
       </span>
+      {children}
     </header>
   );
 }

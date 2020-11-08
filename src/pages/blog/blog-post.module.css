@@ -8,6 +8,19 @@
     1fr
     min(65ch, 100%)
     1fr;
+
+  width: min(85ch, 100%);
+  margin: theme('padding.2') auto;
+  outline: 1px solid rgba(0, 0, 0, 0.35);
+  background-color: theme('colors.gray.100');
+}
+
+@media only screen and (min-width: 768px) {
+  .post {
+    position: relative;
+    bottom: 10vh;
+    z-index: 2;
+  }
 }
 
 .post > * {
@@ -18,6 +31,9 @@
 :global(.post > .full-width-image) {
   width: 100%;
   grid-column: 1 / 4;
+}
+
+:global(.post > .gatsby-resp-image-wrapper) {
   margin: 2rem auto;
 }
 

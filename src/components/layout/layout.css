@@ -1,2 +1,6 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/utilities';
+
+body {
+  background-color: theme('colors.gray.300');
+}

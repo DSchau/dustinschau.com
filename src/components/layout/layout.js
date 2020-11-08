@@ -5,13 +5,18 @@ import { SkipNavLink, SkipNavContent } from '@reach/skip-nav';
 import { Header } from '../header/';
 import { Footer } from '../footer';
 
-export function Layout({ children, compressed, customSkipNavigation = false }) {
+export function Layout({
+  children,
+  compressed,
+  customSkipNavigation = false,
+  header,
+}) {
   const Wrapper = customSkipNavigation ? React.Fragment : SkipNavContent;
   return (
     <main>
       <Helmet title="Dustin Schau" />
       <SkipNavLink />
-      <Header compressed={compressed} />
+      <Header compressed={compressed}>{header}</Header>
       <Wrapper>{children}</Wrapper>
       <Footer />
     </main>

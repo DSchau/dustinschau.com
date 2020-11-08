@@ -9,7 +9,14 @@ import { MDXProvider } from '../../components/mdx-provider';
 import styles from './blog-post.module.css';
 
 export default ({ data }) => (
-  <Layout customSkipNavigation={true}>
+  <Layout
+    customSkipNavigation={true}
+    header={
+      <SkipNavContent>
+        <h2 className={styles.title}>{data.mdx.frontmatter.title}</h2>
+      </SkipNavContent>
+    }
+  >
     <article className={`${styles.post} post`}>
       {data.mdx.frontmatter.featured && (
         <Image
@@ -17,9 +24,6 @@ export default ({ data }) => (
           {...data.mdx.frontmatter.featured.childImageSharp}
         />
       )}
-      <SkipNavContent>
-        <h2 className={styles.title}>{data.mdx.frontmatter.title}</h2>
-      </SkipNavContent>
       <MDXProvider>
         <MDXRenderer children={data.mdx.body} />
       </MDXProvider>
