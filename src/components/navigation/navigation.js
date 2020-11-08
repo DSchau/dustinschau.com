@@ -28,7 +28,7 @@ function Navigation({ className, ...props }) {
             <a
               href={link}
               target="_blank"
-              rel="noopener noreferer"
+              rel="noopener noreferrer"
               className={styles.link}
               title={text}
             >
