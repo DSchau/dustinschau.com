@@ -17,7 +17,7 @@ export default ({ data }) => (
       </SkipNavContent>
     }
   >
-    <article className={`${styles.post} post`}>
+    <article className={`${styles.post} post prose lg:prose-xl`}>
       {data.mdx.frontmatter.featured && (
         <Image
           className="full-width-image"
