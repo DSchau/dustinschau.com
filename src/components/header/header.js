@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import { Navigation } from './navigation';
+import { Navigation } from '../navigation/';
 import useMatchMedia from '../../hooks/use-match-media';
 
 import styles from './header.module.css';
