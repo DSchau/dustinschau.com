@@ -55,7 +55,7 @@
   transform: translateX(-50%);
   margin: 0 auto;
   text-align: center;
-  background-color: theme('colors.white');
+  background-color: theme('colors.gray.200');
   color: theme('colors.gray.900');
   font-size: theme('fontSize.lg');
   font-weight: bold;
@@ -66,4 +66,10 @@
   font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
   font-style: italic;
   font-weight: normal;
+}
+
+.navigation {
+  position: absolute;
+  top: theme('space.2');
+  z-index: 2;
 }

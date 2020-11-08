@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import styles from './header.module.css';
-
+import { Navigation } from './navigation';
 import useMatchMedia from '../../hooks/use-match-media';
+
+import styles from './header.module.css';
 
 const getParticlesConfig = (particlesConfig, options) => {
   let config = Object.assign({}, particlesConfig);
@@ -47,6 +48,7 @@ export function Header({ compressed = true }) {
         .concat(compressed ? styles.compressed : [])
         .join(' ')}
     >
+      {!compressed && <Navigation className={styles.navigation} />}
       <span className={styles.content}>
         <h1 className={styles.title}>
           <Link to="/" className={styles.link}>
@@ -55,10 +57,12 @@ export function Header({ compressed = true }) {
           </Link>
         </h1>
 
-        <h2 className={styles.subTitle}>
-          Product Leader <span className={styles.ampersand}>&amp;</span>{' '}
-          Engineer
-        </h2>
+        {!compressed && (
+          <h2 className={styles.subTitle}>
+            Product Leader <span className={styles.ampersand}>&amp;</span>{' '}
+            Engineer
+          </h2>
+        )}
       </span>
     </header>
   );
