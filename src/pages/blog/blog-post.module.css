@@ -8,7 +8,6 @@
     1fr
     min(65ch, 100%)
     1fr;
-
   width: min(85ch, 100%);
   margin: theme('padding.2') auto;
   outline: 1px solid rgba(0, 0, 0, 0.35);

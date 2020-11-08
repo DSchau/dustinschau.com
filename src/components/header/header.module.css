@@ -5,7 +5,7 @@
   flex-direction: column;
   background-color: theme('colors.gray.800');
   position: relative;
-  height: 75vh; /* TODO: probably tweak with media queries */
+  min-height: 75vh; /* TODO: probably tweak with media queries */
 }
 
 .header canvas {
@@ -18,7 +18,7 @@
 }
 
 .compressed {
-  height: 50vh;
+  min-height: 50vh;
   align-items: flex-start;
   justify-content: flex-start;
 }

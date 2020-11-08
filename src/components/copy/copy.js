@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { IoMdCopy } from 'react-icons/io';
 
 import { ScreenReaderText } from '../screen-reader';
 import { copyToClipboard } from '../../utils';
@@ -11,6 +12,7 @@ const delay = (duration) =>
 function Copy({
   className,
   content,
+  icon = true,
   duration = 5000,
   fileName = '',
   trim = false,
@@ -37,6 +39,7 @@ function Copy({
       }}
     >
       {copied ? `Copied` : `Copy`}
+      {icon && <IoMdCopy />}
       <ScreenReaderText aria-roledescription="status">{label}</ScreenReaderText>
     </button>
   );

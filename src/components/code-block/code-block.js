@@ -61,7 +61,7 @@ const CodeBlock = ({
                 content={content}
               />
             )}
-            <pre className={`language-${language} p-4 pt-8 ${styles.pre}`}>
+            <pre className={`language-${language} p-4 ${styles.pre}`}>
               <code className={`language-${language}`}>
                 {tokens.map((line, i) => {
                   const lineProps = getLineProps({ line, key: i });
