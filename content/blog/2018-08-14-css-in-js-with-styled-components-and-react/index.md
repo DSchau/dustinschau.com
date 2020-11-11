@@ -11,7 +11,7 @@ excerpt: "I'm incredibly excited to announce that I've been working on a Manning
 
 I am _incredibly_ excited to announce that for the last several months I've been working on a [Manning][manning] liveVideo course. The topic, as you may have imagined, is CSS in JS, specifically with a styled-components and React focus.
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">New <a href="https://twitter.com/ManningBooks?ref_src=twsrc%5Etfw">@ManningBooks</a> early access video: &quot;CSS in JavaScript: With styled-components and React&quot; by Dustin Schau <a href="https://twitter.com/SchauDustin?ref_src=twsrc%5Etfw">@schaudustin</a> <a href="https://twitter.com/hashtag/ReactJS?src=hash&amp;ref_src=twsrc%5Etfw">#ReactJS</a> <a href="https://twitter.com/hashtag/css?src=hash&amp;ref_src=twsrc%5Etfw">#css</a> <a href="https://twitter.com/hashtag/WebDev?src=hash&amp;ref_src=twsrc%5Etfw">#WebDev</a> <a href="https://twitter.com/hashtag/JavaScript?src=hash&amp;ref_src=twsrc%5Etfw">#JavaScript</a> <a href="https://t.co/TKZVC882kC">https://t.co/TKZVC882kC</a> <a href="https://t.co/S2cUqiEFm7">pic.twitter.com/S2cUqiEFm7</a></p>&mdash; John Dhabolt (@Dhabolt) <a href="https://twitter.com/Dhabolt/status/1027139514186256384?ref_src=twsrc%5Etfw">August 8, 2018</a></blockquote>
+https://twitter.com/Dhabolt/status/1027139514186256384
 
 _Hot damn, it's happening!_
 

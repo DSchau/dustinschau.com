@@ -13,6 +13,7 @@
     "@loadable/component": "^5.14.1",
     "@mdx-js/mdx": "^1.6.19",
     "@mdx-js/react": "^1.6.19",
+    "@raae/gatsby-remark-oembed": "^0.1.1",
     "@reach/skip-nav": "^0.11.2",
     "@tailwindcss/typography": "^0.2.0",
     "gatsby": "^2.27.0-next.0",

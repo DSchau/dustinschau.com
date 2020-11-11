@@ -22,6 +22,7 @@ const Section = function ({ children, className, title, ...props }) {
 export default function Index({ data: { posts } }) {
   return (
     <Layout compressed={false}>
+      <Section title="Hey-o 👋">{/* TODO */}</Section>
       <Section title="The Blog">
         <Grid>
           {posts.nodes.map((post) => (

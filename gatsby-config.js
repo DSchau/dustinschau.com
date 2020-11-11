@@ -28,6 +28,20 @@ module.exports = {
               maxWidth: 1200,
             },
           },
+          {
+            resolve: `@raae/gatsby-remark-oembed`,
+            options: {
+              usePrefix: false,
+              providers: {
+                include: ['Twitter'],
+                settings: {
+                  Twitter: {
+                    theme: 'dark', // Use the Twitter dark theme
+                  },
+                },
+              },
+            },
+          },
         ],
       },
     },
