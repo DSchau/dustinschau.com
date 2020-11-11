@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 
 import styles from './preview.module.css';
@@ -19,5 +19,23 @@ function Preview({ excerpt, frontmatter, slug }) {
     </section>
   );
 }
+
+export const blogPostPreviewFragment = graphql`
+  fragment MdxBlogPostPreviewFragment on Mdx {
+    id
+    excerpt
+    slug: gatsbyPath(filePath: "/blog/{Mdx.parent__(File)__relativeDirectory}")
+    frontmatter {
+      featured {
+        childImageSharp {
+          fluid(maxHeight: 200, cropFocus: NORTH) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      title
+    }
+  }
+`;
 
 export { Preview };

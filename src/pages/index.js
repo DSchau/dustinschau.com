@@ -21,20 +21,7 @@ export const indexQuery = graphql`
   {
     posts: allMdx(sort: { fields: frontmatter___date, order: DESC }, limit: 4) {
       nodes {
-        id
-        excerpt
-        slug
-        # slug: gatsbyPath(filePath: "/blog/{Mdx.slug}")
-        frontmatter {
-          featured {
-            childImageSharp {
-              fluid(maxHeight: 200, cropFocus: NORTH) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          title
-        }
+        ...MdxBlogPostPreviewFragment
       }
     }
   }
