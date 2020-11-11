@@ -2,5 +2,5 @@
 @import 'tailwindcss/utilities';
 
 body {
-  background-color: theme('colors.gray.300');
+  background-color: theme('colors.gray.200');
 }

@@ -2,16 +2,17 @@ import React from 'react';
 
 import { graphql } from 'gatsby';
 
+import { Grid } from '../../components/grid';
 import { Layout } from '../../components/layout/';
 import { Preview } from '../../components/preview/';
 
 export default ({ data }) => (
   <Layout>
-    <div className="grid lg:grid-cols-2">
+    <Grid>
       {data.posts.nodes.map((post) => (
         <Preview key={post.id} {...post} />
       ))}
-    </div>
+    </Grid>
   </Layout>
 );
 
