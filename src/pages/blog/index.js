@@ -8,7 +8,7 @@ import { Preview } from '../../components/preview/';
 
 export default ({ data }) => (
   <Layout>
-    <Grid>
+    <Grid wrapper="section">
       {data.posts.nodes.map((post) => (
         <Preview key={post.id} {...post} />
       ))}

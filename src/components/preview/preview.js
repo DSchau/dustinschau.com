@@ -4,9 +4,9 @@ import Image from 'gatsby-image';
 
 import styles from './preview.module.css';
 
-function Preview({ excerpt, frontmatter, slug }) {
+function Preview({ excerpt, frontmatter, slug, wrapper: Wrapper = 'article' }) {
   return (
-    <section className={styles.container}>
+    <Wrapper className={styles.container}>
       {frontmatter.featured && (
         <div className={styles.featured}>
           <Image {...frontmatter.featured.childImageSharp} />
@@ -16,7 +16,7 @@ function Preview({ excerpt, frontmatter, slug }) {
         <Link to={slug}>{frontmatter.title}</Link>
       </h3>
       <p>{excerpt}</p>
-    </section>
+    </Wrapper>
   );
 }
 

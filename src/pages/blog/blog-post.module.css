@@ -17,7 +17,7 @@
 @media only screen and (min-width: 768px) {
   .post {
     position: relative;
-    bottom: 10vh;
+    bottom: 48px;
     z-index: 2;
   }
 }

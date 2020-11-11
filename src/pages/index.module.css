@@ -1,0 +1,9 @@
+.section {
+  padding: theme('space.3') 0;
+}
+
+.section-title {
+  font-size: theme('fontSize.3xl');
+  text-align: center;
+  text-transform: uppercase;
+}
