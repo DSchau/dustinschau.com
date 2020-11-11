@@ -1,6 +1,6 @@
 .container {
   position: relative;
-  margin: theme('p.5');
+  margin: theme('padding.5');
 }
 
 .pre {

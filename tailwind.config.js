@@ -1,8 +1,12 @@
 module.exports = {
   future: {
     defaultLineHeights: true,
+    purgeLayersByDefault: true,
   },
-  purge: ['src/**/*.{js,css}'],
+  purge: {
+    layers: ['utilities'],
+    content: ['src/**/*.{js,css}'],
+  },
   theme: {
     extend: {},
   },
