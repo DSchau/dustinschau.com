@@ -4,7 +4,7 @@ import Image from 'gatsby-image';
 
 import styles from './bio.module.css';
 
-function Bio() {
+function Bio({ className, ...props }) {
   const data = useStaticQuery(graphql`
     {
       site {
@@ -35,7 +35,7 @@ function Bio() {
     });
 
   return (
-    <div className={styles.bio}>
+    <div className={[styles.bio].concat(className).join(' ')} {...props}>
       <div className={styles.imageContainer}>
         <Image className={styles.image} {...data.file.childImageSharp} />
       </div>

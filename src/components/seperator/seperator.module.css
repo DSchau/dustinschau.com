@@ -1,0 +1,7 @@
+.seperator {
+  border: none;
+  margin: theme('space.8') auto;
+  height: 1px;
+  width: 80%;
+  background-color: theme('colors.gray.300');
+}

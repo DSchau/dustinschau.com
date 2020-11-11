@@ -7,6 +7,7 @@ import Image from 'gatsby-image';
 import { Layout } from '../../components/layout/';
 import { Bio } from '../../components/bio/';
 import { MDXProvider } from '../../components/mdx-provider';
+import { Seperator } from '../../components/seperator/';
 import styles from './blog-post.module.css';
 
 export default function BlogPost({ data }) {
@@ -25,7 +26,8 @@ export default function BlogPost({ data }) {
         <MDXProvider>
           <MDXRenderer children={data.mdx.body} />
         </MDXProvider>
-        <Bio />
+        <Seperator />
+        <Bio className={styles.bio} />
       </article>
     </Layout>
   );

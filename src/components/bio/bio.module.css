@@ -1,7 +1,19 @@
 .bio {
   display: flex;
   align-items: center;
-  padding: theme('space.8') 0;
+  transition: filter 250ms ease-in-out, color 250ms ease-in-out;
+}
+
+.bio:hover .image,
+.bio:hover {
+  filter: grayscale(0);
+  color: theme('colors.gray.900');
+}
+
+.bio,
+.image {
+  filter: grayscale(1);
+  color: theme('colors.gray.700');
 }
 
 .image-container {
@@ -10,6 +22,7 @@
 
 .image {
   border-radius: 100%;
+  filter: grayscale(1);
 }
 
 .name {
