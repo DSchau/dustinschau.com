@@ -5,6 +5,7 @@ import { graphql } from 'gatsby';
 import Image from 'gatsby-image';
 
 import { Layout } from '../../components/layout/';
+import { Bio } from '../../components/bio/';
 import { MDXProvider } from '../../components/mdx-provider';
 import styles from './blog-post.module.css';
 
@@ -24,6 +25,7 @@ export default function BlogPost({ data }) {
         <MDXProvider>
           <MDXRenderer children={data.mdx.body} />
         </MDXProvider>
+        <Bio />
       </article>
     </Layout>
   );

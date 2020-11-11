@@ -1,0 +1,17 @@
+.bio {
+  display: flex;
+  align-items: center;
+  padding: theme('space.8') 0;
+}
+
+.image-container {
+  padding-right: theme('space.4');
+}
+
+.image {
+  border-radius: 100%;
+}
+
+.name {
+  text-transform: uppercase;
+}

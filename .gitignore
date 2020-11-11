@@ -119,3 +119,5 @@ dist
 public
 .cache
 
+# mac files
+.DS_Store
