@@ -18,7 +18,7 @@ function Bio({ className, ...props }) {
 
       file(relativePath: { regex: "/me.png/" }) {
         childImageSharp {
-          fixed(height: 72, width: 72, cropFocus: NORTH) {
+          fixed(height: 72, width: 72) {
             ...GatsbyImageSharpFixed
           }
         }

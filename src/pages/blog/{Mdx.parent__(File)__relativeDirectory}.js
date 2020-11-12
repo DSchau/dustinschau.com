@@ -15,7 +15,7 @@ export default function BlogPost({ data }) {
     <Layout customSkipNavigation={true} compressed={true}>
       <article className={`${styles.post} post prose lg:prose-xl`}>
         <SkipNavContent>
-          <h2 className={styles.title}>{data.mdx.frontmatter.title}</h2>
+          <h2>{data.mdx.frontmatter.title}</h2>
         </SkipNavContent>
         {data.mdx.frontmatter.featured && (
           <Image

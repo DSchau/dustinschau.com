@@ -10,7 +10,6 @@
     1fr;
   width: min(85ch, 100%);
   margin: theme('padding.2') auto;
-  padding: theme('spacing.8') 0;
   outline: 1px solid rgba(0, 0, 0, 0.35);
   background-color: theme('colors.gray.100');
 }
@@ -41,11 +40,6 @@
   grid-column: 1 / 4;
   width: min(85ch, 100%);
   margin: 1rem auto;
-}
-
-.title {
-  font-size: theme('fontSize.5xl');
-  line-height: 1;
 }
 
 .bio {

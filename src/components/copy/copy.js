@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { IoMdCopy } from 'react-icons/io';
 
-import { ScreenReaderText } from '../screen-reader';
 import { copyToClipboard } from '../../utils';
 import styles from './copy.module.css';
 
@@ -40,7 +39,9 @@ function Copy({
     >
       {copied ? `Copied` : `Copy`}
       {icon && <IoMdCopy />}
-      <ScreenReaderText aria-roledescription="status">{label}</ScreenReaderText>
+      <span className="sr-only" aria-roledescription="status">
+        {label}
+      </span>
     </button>
   );
 }
