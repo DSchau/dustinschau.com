@@ -1,4 +1,6 @@
 .button {
+  display: flex;
+  align-items: center;
   background-color: transparent;
   border: none;
   color: theme('color.white');
