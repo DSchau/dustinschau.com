@@ -63,24 +63,28 @@ Using the power and flexibility of React, we can create a React component to pow
 import React from 'react';
 // highlight-start
 import Helmet from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 // highlight-end
 
 function SEO() {
-  const data = useStaticQuery(graphql`
-    # highlight-start
-    {
-      site {
-        siteMetadata {
-          description
-          keywords
-          siteUrl
+  return (
+    <StaticQuery
+      query={graphql`
+        # highlight-start
+        {
+          site {
+            siteMetadata {
+              description
+              keywords
+              siteUrl
+            }
+          }
         }
-      }
-    }
-    # highlight-end
-  `);
-  return null; /* TO IMPLEMENT, of course! */
+        # highlight-end
+      `}
+      render={(data) => null}
+    />
+  );
 }
 
 export default SEO;
@@ -93,36 +97,39 @@ The `StaticQuery` component accepts a render prop, and at this point, we're simp
 ```jsx:title=src/components/seo.js
 import React from 'react';
 import Helmet from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 
 function SEO() {
-  const data = useStaticQuery(graphql`
-    {
-      site {
-        siteMetadata {
-          description
-          keywords
-          siteUrl
-        }
-      }
-    }
-  `);
-
   return (
-    <Helmet
-      htmlAttributes={{
-        lang: 'en',
-      }}
-      meta={
-        // highlight-start
-        [
-          {
-            name: 'description',
-            content: data.site.siteMetadata.description,
-          },
-        ]
-        // highlight-end
-      }
+    <StaticQuery
+      query={graphql`
+        {
+          site {
+            siteMetadata {
+              author
+              description
+              siteUrl
+            }
+          }
+        }
+      `}
+      render={(data) => (
+        <Helmet
+          htmlAttributes={{
+            lang: 'en',
+          }}
+          meta={
+            // highlight-start
+            [
+              {
+                name: 'description',
+                content: data.site.siteMetadata.description,
+              },
+            ]
+            // highlight-end
+          }
+        />
+      )}
     />
   );
 }
