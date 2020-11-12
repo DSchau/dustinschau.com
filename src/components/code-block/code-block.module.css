@@ -1,11 +1,5 @@
 .container {
   position: relative;
-  margin: theme('padding.5');
-}
-
-.pre {
-  background-color: #282a36;
-  overflow-x: scroll;
 }
 
 .copy {
@@ -14,4 +8,104 @@
   top: 4px;
   right: 4px;
   border-radius: 4px;
+}
+
+.code-title {
+  margin: 0 !important;
+  padding: theme('padding.2') theme('padding.4') !important;
+  font-family: theme('fontFamily.mono');
+  font-size: theme('fontSize.sm');
+  font-weight: bold;
+  background-color: #1c1f23;
+  color: theme('colors.white');
+}
+
+.pre {
+  background-color: #282a36;
+  overflow-x: scroll;
+}
+
+.pre[class*='language-'] {
+  border: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.pre[class*='language-']::before {
+  background: theme('colors.gray.300');
+  border-radius: 0 0 theme('padding.1') theme('padding.1');
+  color: theme('colors.gray.900');
+  font-size: theme('fontSize.xs');
+  letter-spacing: 0.0785rem;
+  line-height: 1;
+  padding: theme('padding.2') theme('padding.3');
+  position: absolute;
+  left: theme('padding.4');
+  top: 0;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.pre[class*='language-javascript']::before,
+.pre[class*='language-js']::before {
+  content: 'js';
+  background: theme('colors.yellow.400');
+}
+
+.pre[class*='language-jsx']::before {
+  content: 'jsx';
+  background: theme('colors.blue.400');
+}
+
+.pre[class*='language-typescript']::before,
+.pre[class*='language-ts']::before,
+.pre[class*='language-tsx']::before {
+  content: 'ts';
+  background: theme('colors.blue.800');
+  color: theme('colors.white');
+}
+
+.pre[class*='language-html']::before {
+  content: 'html';
+  background: theme('colors.orange.400');
+  color: theme('colors.white');
+}
+
+.pre[class*='language-graphql']::before {
+  content: 'graphql';
+  background: theme('colors.pink.400');
+}
+
+.pre[class*='language-css']::before {
+  content: 'css';
+  background: theme('colors.orange.400');
+  color: 'white';
+}
+
+.pre[class*='language-mdx']::before {
+  content: 'css';
+  background: theme('colors.orange.400');
+  color: 'white';
+}
+
+.pre[class*='language-markdown']::before,
+.pre[class*='language-md']::before {
+  content: 'md';
+  background: theme('colors.orange.400');
+  color: 'white';
+}
+
+.pre[class*='language-sh']::before {
+  content: 'shell';
+}
+
+.pre[class*='language-shell']::before {
+  content: 'shell';
+}
+
+.pre[class*='language-bash']::before {
+  content: 'shell';
+}
+
+.pre[class*='language-json']::before {
+  content: 'json';
 }

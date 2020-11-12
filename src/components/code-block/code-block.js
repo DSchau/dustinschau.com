@@ -48,20 +48,20 @@ const CodeBlock = ({
     <LazyHighlight code={content} language={language} theme={dracula}>
       {({ tokens, getLineProps, getTokenProps }) => (
         <React.Fragment>
-          <div className={`gatsby-highlight ${styles.container}`}>
+          <div className={`gatsby-highlight`}>
             {title && (
-              <div className="gatsby-code-title">
-                <div style={{ fontSize: 0 }}>{title}</div>
-              </div>
+              <p className={styles.codeTitle}>{title.replace(/`/g, '')}</p>
             )}
-            {copy && (
-              <Copy
-                fileName={title}
-                className={styles.copy}
-                content={content}
-              />
-            )}
-            <pre className={`language-${language} p-4 ${styles.pre}`}>
+            <pre
+              className={`${styles.container} language-${language} p-2 pt-6 md:p-4 lg:p-8 ${styles.pre}`}
+            >
+              {copy && (
+                <Copy
+                  fileName={title}
+                  className={styles.copy}
+                  content={content}
+                />
+              )}
               <code className={`language-${language}`}>
                 {tokens.map((line, i) => {
                   const lineProps = getLineProps({ line, key: i });
