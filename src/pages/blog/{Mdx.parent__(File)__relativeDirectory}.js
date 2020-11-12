@@ -2,7 +2,7 @@ import React from 'react';
 import { SkipNavContent } from '@reach/skip-nav';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { graphql } from 'gatsby';
-import Image from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image/compat';
 
 import { Layout } from '../../components/layout/';
 import { Bio } from '../../components/bio/';
@@ -10,19 +10,21 @@ import { MDXProvider } from '../../components/mdx-provider';
 import { Seperator } from '../../components/seperator/';
 import styles from './blog-post.module.css';
 
+/*
+ * TODO: gatsby-image is wack here
+ */
 export default function BlogPost({ data }) {
   return (
     <Layout customSkipNavigation={true} compressed={true}>
       <article className={`${styles.post} post prose lg:prose-xl`}>
-        <SkipNavContent>
-          <h2>{data.mdx.frontmatter.title}</h2>
-        </SkipNavContent>
+        <h2>{data.mdx.frontmatter.title}</h2>
         {data.mdx.frontmatter.featured && (
-          <Image
+          <GatsbyImage
             className="full-width-image"
             {...data.mdx.frontmatter.featured.childImageSharp}
           />
         )}
+        <SkipNavContent />
         <MDXProvider>
           <MDXRenderer children={data.mdx.body} />
         </MDXProvider>
@@ -40,7 +42,7 @@ export const query = graphql`
       frontmatter {
         featured {
           childImageSharp {
-            fluid(maxWidth: 800) {
+            fluid(maxHeight: 600) {
               ...GatsbyImageSharpFluid
             }
           }

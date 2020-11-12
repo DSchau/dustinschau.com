@@ -63,28 +63,24 @@ Using the power and flexibility of React, we can create a React component to pow
 import React from 'react';
 // highlight-start
 import Helmet from 'react-helmet';
-import { StaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 // highlight-end
 
 function SEO() {
-  return (
-    <StaticQuery
-      query={graphql`
-        # highlight-start
-        {
-          site {
-            siteMetadata {
-              description
-              keywords
-              siteUrl
-            }
-          }
+  const data = useStaticQuery(graphql`
+    # highlight-start
+    {
+      site {
+        siteMetadata {
+          description
+          keywords
+          siteUrl
         }
-        # highlight-end
-      `}
-      render={(data) => null}
-    />
-  );
+      }
+    }
+    # highlight-end
+  `);
+  return null; /* TO IMPLEMENT, of course! */
 }
 
 export default SEO;
@@ -97,39 +93,36 @@ The `StaticQuery` component accepts a render prop, and at this point, we're simp
 ```jsx:title=src/components/seo.js
 import React from 'react';
 import Helmet from 'react-helmet';
-import { StaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 
 function SEO() {
-  return (
-    <StaticQuery
-      query={graphql`
-        {
-          site {
-            siteMetadata {
-              author
-              description
-              siteUrl
-            }
-          }
+  const data = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          description
+          keywords
+          siteUrl
         }
-      `}
-      render={(data) => (
-        <Helmet
-          htmlAttributes={{
-            lang: 'en',
-          }}
-          meta={
-            // highlight-start
-            [
-              {
-                name: 'description',
-                content: data.site.siteMetadata.description,
-              },
-            ]
-            // highlight-end
-          }
-        />
-      )}
+      }
+    }
+  `);
+
+  return (
+    <Helmet
+      htmlAttributes={{
+        lang: 'en',
+      }}
+      meta={
+        // highlight-start
+        [
+          {
+            name: 'description',
+            content: data.site.siteMetadata.description,
+          },
+        ]
+        // highlight-end
+      }
     />
   );
 }

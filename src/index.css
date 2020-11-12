@@ -5,3 +5,7 @@
 body {
   background-color: theme('colors.gray.200');
 }
+
+a[data-reach-skip-nav-link] {
+  z-index: 9999 !important; /* It's over 9000 */
+}

@@ -323,7 +323,7 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.10.4", "@babel/parser@^7.10.5", "@babel/parser@^7.11.5", "@babel/parser@^7.12.3", "@babel/parser@^7.12.5", "@babel/parser@^7.7.0":
+"@babel/parser@^7.10.4", "@babel/parser@^7.10.5", "@babel/parser@^7.11.5", "@babel/parser@^7.12.3", "@babel/parser@^7.12.5", "@babel/parser@^7.7.0", "@babel/parser@^7.8.7":
   version "7.12.5"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.12.5.tgz#b4af32ddd473c0bfa643bd7ff0728b8e71b81ea0"
   integrity sha512-FVM6RZQ0mn2KCf1VUED7KepYeUWoVShczewOCfm3nzoBybaih51h+sYVVGthW9M6lPByEPTQf+xm27PBdlpwmQ==
@@ -1008,7 +1008,7 @@
     "@babel/parser" "^7.10.4"
     "@babel/types" "^7.10.4"
 
-"@babel/traverse@^7.10.4", "@babel/traverse@^7.10.5", "@babel/traverse@^7.11.5", "@babel/traverse@^7.12.1", "@babel/traverse@^7.12.5", "@babel/traverse@^7.7.0":
+"@babel/traverse@^7.10.4", "@babel/traverse@^7.10.5", "@babel/traverse@^7.11.5", "@babel/traverse@^7.12.1", "@babel/traverse@^7.12.5", "@babel/traverse@^7.7.0", "@babel/traverse@^7.8.6":
   version "7.12.5"
   resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.12.5.tgz#78a0c68c8e8a35e4cacfd31db8bb303d5606f095"
   integrity sha512-xa15FbQnias7z9a62LwYAA5SZZPkHIXpd42C6uW68o8uTuua96FHZy1y61Va5P/i83FAAcMpW8+A/QayntzuqA==
@@ -2725,6 +2725,11 @@ babel-eslint@^10.1.0:
     eslint-visitor-keys "^1.0.0"
     resolve "^1.12.0"
 
+babel-jsx-utils@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/babel-jsx-utils/-/babel-jsx-utils-1.0.1.tgz#f2d171cba526594e7d69e9893d634502cf950f07"
+  integrity sha512-Qph/atlQiSvfmkoIZ9VA+t8dA0ex2TwL37rkhLT9YLJdhaTMZ2HSM2QGzbqjLWanKA+I3wRQJjjhtuIEgesuLw==
+
 babel-loader@^8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-8.1.0.tgz#c611d5112bd5209abe8b9fa84c3e4da25275f1c3"
@@ -2789,6 +2794,11 @@ babel-plugin-remove-graphql-queries@^2.11.0-next.0:
   version "2.11.0-next.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-2.11.0-next.0.tgz#adc2c40662e32d303dbbcf2394081dd8e20a2048"
   integrity sha512-/mESFppljJqHNyRUH+GK7zTdPMwK7t6lujcP6yqq9fLm1urFYQ8gNC4PzaHd+hOpdaeTuShj9KHCgT+2oehIBw==
+
+babel-plugin-remove-graphql-queries@^2.9.19:
+  version "2.9.20"
+  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-2.9.20.tgz#69ad42efdb3b4340992080afba101d2d1a2843b2"
+  integrity sha512-FB4tIvdXaGFBFhHAzlqB0NxVA5BcjzVYbY8ut7ProStW3cjv208ADMlfzmPdSP/I1Z0wl2MrXgHNCrL1TQ/Mew==
 
 babel-plugin-transform-react-remove-prop-types@^0.4.24:
   version "0.4.24"
@@ -6410,6 +6420,20 @@ gatsby-page-utils@^0.4.0-next.0:
     glob "^7.1.6"
     lodash "^4.17.20"
     micromatch "^4.0.2"
+
+gatsby-plugin-image@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-0.0.7.tgz#a35f18e67ff8576b583b3b852a36a83c6fed1ddc"
+  integrity sha512-Ie6DTHJneDiZgMm0UwWXf4KQdMagczk3BMaQS+7RKed8tN3hLeXzaRnz4F7/vn5GctktzZNXqVt6VrUnFY0vtA==
+  dependencies:
+    "@babel/parser" "^7.8.7"
+    "@babel/traverse" "^7.8.6"
+    babel-jsx-utils "^1.0.1"
+    babel-plugin-remove-graphql-queries "^2.9.19"
+    chokidar "^3.4.3"
+    fs-extra "^8.1.0"
+    gatsby-core-utils "^1.3.24"
+    prop-types "^15.7.2"
 
 gatsby-plugin-mdx@^1.3.1:
   version "1.3.1"

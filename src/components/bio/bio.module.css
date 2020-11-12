@@ -21,8 +21,11 @@
 }
 
 .image {
-  border-radius: 100%;
   filter: grayscale(1);
+}
+
+.image img {
+  border-radius: 100%;
 }
 
 .name {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import Image from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image/compat';
 
 import styles from './preview.module.css';
 
@@ -9,7 +9,7 @@ function Preview({ excerpt, frontmatter, slug, wrapper: Wrapper = 'article' }) {
     <Wrapper className={styles.container}>
       {frontmatter.featured && (
         <div className={styles.featured}>
-          <Image {...frontmatter.featured.childImageSharp} />
+          <GatsbyImage {...frontmatter.featured.childImageSharp} />
         </div>
       )}
       <h3 className={styles.title}>
@@ -28,7 +28,7 @@ export const blogPostPreviewFragment = graphql`
     frontmatter {
       featured {
         childImageSharp {
-          fluid(maxHeight: 200, cropFocus: NORTH) {
+          fluid(maxHeight: 400, cropFocus: NORTH) {
             ...GatsbyImageSharpFluid
           }
         }

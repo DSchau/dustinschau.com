@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import Image from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image/compat';
 
 import styles from './bio.module.css';
 
@@ -37,7 +37,7 @@ function Bio({ className, ...props }) {
   return (
     <div className={[styles.bio].concat(className).join(' ')} {...props}>
       <div className={styles.imageContainer}>
-        <Image className={styles.image} {...data.file.childImageSharp} />
+        <GatsbyImage className={styles.image} {...data.file.childImageSharp} />
       </div>
       <p>
         <strong className={styles.name}>

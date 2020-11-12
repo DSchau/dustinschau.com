@@ -47,6 +47,9 @@ const CodeBlock = ({
   return (
     <LazyHighlight code={content} language={language} theme={dracula}>
       {({ tokens, getLineProps, getTokenProps }) => (
+        /*
+         * TODO: remove wrapping divs
+         */
         <div className={`gatsby-highlight`}>
           {title && (
             <p className={styles.codeTitle}>{title.replace(/`/g, '')}</p>
@@ -66,7 +69,7 @@ const CodeBlock = ({
                 {tokens.map((line, i) => {
                   const lineProps = getLineProps({ line, key: i });
                   const className = [lineProps.className]
-                    .concat(highlights[i] && `gatsby-highlight-code-line`)
+                    .concat(highlights[i] && styles.highlighted)
                     .filter(Boolean)
                     .join(` `);
                   return (
