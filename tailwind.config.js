@@ -26,6 +26,10 @@ module.exports = {
             marginBottom: `0 !important`,
             borderRadius: `0 !important`,
           },
+          img: {
+            marginTop: '0 !important',
+            marginBottom: '0 !important',
+          },
           ol: {
             marginTop: `0 !important`,
             marginBottom: `0 !important`,
