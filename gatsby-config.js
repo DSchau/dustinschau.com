@@ -34,6 +34,7 @@ module.exports = {
           require('remark-unwrap-images'), // god damn this is annoying
         ],
         gatsbyRemarkPlugins: [
+          'gatsby-remark-smartypants',
           {
             resolve: `gatsby-remark-images`,
             options: {
