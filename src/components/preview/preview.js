@@ -23,7 +23,7 @@ function Preview({ excerpt, frontmatter, slug, wrapper: Wrapper = 'article' }) {
 export const blogPostPreviewFragment = graphql`
   fragment MdxBlogPostPreviewFragment on Mdx {
     id
-    excerpt
+    excerpt(pruneLength: 160, truncate: true)
     slug: gatsbyPath(filePath: "/blog/{Mdx.parent__(File)__relativeDirectory}")
     frontmatter {
       featured {

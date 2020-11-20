@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
 import { Grid } from '../components/grid/';
 import { Layout } from '../components/layout/';
@@ -22,16 +22,24 @@ const Section = function ({ children, className, title, ...props }) {
 export default function Index({ data: { posts } }) {
   return (
     <Layout compressed={false}>
-      <Section title="Hey-o 👋">{/* TODO */}</Section>
+      <Section title="Hey-o 👋">
+        <h3>Well hello!</h3>
+      </Section>
       <Section title="The Blog">
         <Grid>
           {posts.nodes.map((post) => (
             <Preview key={post.id} {...post} />
           ))}
         </Grid>
+        <Link to="/blog/" className={styles.link}>
+          View all
+        </Link>
       </Section>
       <Section title="Open Source">
         <Grid>{/* TODO: iterate over GitHub stuff */}</Grid>
+        <Link to="/open-source/" className={styles.link}>
+          Learn more
+        </Link>
       </Section>
     </Layout>
   );

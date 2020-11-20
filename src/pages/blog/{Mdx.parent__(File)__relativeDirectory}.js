@@ -17,7 +17,8 @@ export default function BlogPost({ data }) {
   return (
     <Layout customSkipNavigation={true} compressed={true}>
       <article className={`${styles.post} post prose lg:prose-xl`}>
-        <h2>{data.mdx.frontmatter.title}</h2>
+        <h2 className={styles.title}>{data.mdx.frontmatter.title}</h2>
+        <h3 className={styles.date}>{data.mdx.frontmatter.date}</h3>
         {data.mdx.frontmatter.featured && (
           <GatsbyImage
             className="full-width-image"
@@ -40,6 +41,7 @@ export const query = graphql`
     mdx(id: { eq: $id }) {
       body
       frontmatter {
+        date(formatString: "MMMM Do YYYY")
         featured {
           childImageSharp {
             fluid(maxHeight: 600) {

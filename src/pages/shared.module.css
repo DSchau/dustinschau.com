@@ -1,0 +1,5 @@
+.section-title {
+  font-size: theme('fontSize.3xl');
+  text-align: center;
+  text-transform: uppercase;
+}

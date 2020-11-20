@@ -42,6 +42,20 @@
   margin: 1rem auto;
 }
 
+.title {
+  text-align: center;
+  font-size: theme('fontSize.3xl');
+  font-weight: bold;
+  padding: theme('spacing.2') 0;
+}
+
+.date {
+  text-align: center;
+  color: theme('colors.gray.500');
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 .bio {
   padding: theme('spacing.2') 0;
 }

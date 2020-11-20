@@ -1,4 +1,6 @@
 .section {
+  display: flex;
+  flex-direction: column;
   padding: theme('space.3') 0;
 }
 
@@ -6,4 +8,27 @@
   font-size: theme('fontSize.3xl');
   text-align: center;
   text-transform: uppercase;
+  line-height: theme('spacing.4');
+  margin-top: theme('spacing.4');
+  margin-bottom: theme('spacing.4');
+  font-weight: bold;
+}
+
+.link {
+  display: inline-block;
+  width: auto;
+  background-color: theme('colors.black');
+  color: theme('colors.white');
+  font-size: theme('fontSize.2xl');
+  padding: theme('padding.2') theme('padding.6');
+  margin: theme('padding.4') auto;
+  text-align: center;
+  border: theme('padding.1') solid transparent;
+  transition: 175ms ease-in-out;
+}
+
+.link:hover {
+  color: theme('colors.black');
+  background-color: transparent;
+  border-color: theme('colors.black');
 }
