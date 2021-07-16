@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import { Navigation } from '../navigation/';
 import useMatchMedia from '../../hooks/use-match-media';
 
-import styles from './header.module.css';
+import * as styles from './header.module.css';
 
 const getParticlesConfig = (particlesConfig, options) => {
   let config = Object.assign({}, particlesConfig);
@@ -53,7 +53,7 @@ export function Header({ compressed = true, children }) {
         <h1 className={styles.title}>
           <Link to="/" className={styles.link}>
             <span className={styles.firstName}>Dustin</span>
-            <span className={styles.lastName}>Schau</span>
+            <span>Schau</span>
           </Link>
         </h1>
 

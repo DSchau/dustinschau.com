@@ -84,7 +84,7 @@
 
 .pre[class*='language-html']::before {
   content: 'html';
-  background: theme('colors.orange.400');
+  background: theme('colors.yellow.400');
   color: theme('colors.white');
 }
 
@@ -95,20 +95,20 @@
 
 .pre[class*='language-css']::before {
   content: 'css';
-  background: theme('colors.orange.400');
+  background: theme('colors.yellow.400');
   color: 'white';
 }
 
 .pre[class*='language-mdx']::before {
   content: 'css';
-  background: theme('colors.orange.400');
+  background: theme('colors.yellow.400');
   color: 'white';
 }
 
 .pre[class*='language-markdown']::before,
 .pre[class*='language-md']::before {
   content: 'md';
-  background: theme('colors.orange.400');
+  background: theme('colors.yellow.400');
   color: 'white';
 }
 

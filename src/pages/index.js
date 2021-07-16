@@ -5,7 +5,7 @@ import { Grid } from '../components/grid/';
 import { Layout } from '../components/layout/';
 import { Preview } from '../components/preview/';
 
-import styles from './index.module.css';
+import * as styles from './index.module.css';
 
 const Section = function ({ children, className, title, ...props }) {
   return (

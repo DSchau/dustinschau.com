@@ -5,7 +5,7 @@ module.exports = {
     title: `Dustin Schau`,
     author: {
       name: `Dustin Schau`,
-      bio: `is a Product Leader and Engineer who specializes in all things JavaScript and developer tooling. He's from a little ol' town in Iowa (Ida Grove represent), and then moved to San Francisco in 2019, where he lives with his _future_ wife Maggie (thanks Covid!). He claims he doesn't _totally_ suck.`,
+      bio: `is a Product Leader and Engineer who specializes in all things JavaScript and developer tooling. He's from a little ol' town in Iowa (Ida Grove represent), and then moved to San Francisco in 2019, where he lives with his beautiful wife Maggie. He claims he doesn't _totally_ suck.`,
     },
   },
   plugins: [

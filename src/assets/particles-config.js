@@ -1,4 +1,4 @@
-export default {
+const config = {
   particles: {
     number: {
       value: 85,
@@ -39,4 +39,6 @@ export default {
     },
   },
   retina_detect: true,
-};
+}
+
+export default config

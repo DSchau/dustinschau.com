@@ -3,7 +3,7 @@ import React from 'react';
 import { Navigation } from '../navigation';
 import { convertToRoman } from '../../utils/';
 
-import styles from './footer.module.css';
+import * as styles from './footer.module.css';
 
 export function Footer() {
   return (

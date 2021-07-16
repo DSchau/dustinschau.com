@@ -1,8 +1,8 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image/compat';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-import styles from './bio.module.css';
+import * as styles from './bio.module.css';
 
 function Bio({ className, ...props }) {
   const data = useStaticQuery(graphql`
@@ -18,9 +18,7 @@ function Bio({ className, ...props }) {
 
       file(relativePath: { regex: "/me.png/" }) {
         childImageSharp {
-          fixed(height: 72, width: 72) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(layout: FIXED, height: 72, width: 72)
         }
       }
     }
@@ -30,14 +28,14 @@ function Bio({ className, ...props }) {
     .replace(/_([^_]+)_/g, (_, match) => {
       return `<em>${match}</em>`;
     })
-    .replace(/\*([^\*]+)\*/g, (_, match) => {
+    .replace(/\*([^*]+)\*/g, (_, match) => {
       return `<strong>${match}</strong>`;
     });
 
   return (
     <div className={[styles.bio].concat(className).join(' ')} {...props}>
       <div className={styles.imageContainer}>
-        <GatsbyImage className={styles.image} {...data.file.childImageSharp} />
+        <GatsbyImage className={styles.image} image={getImage(data.file)} alt="Face of Dustin Schau" />
       </div>
       <p>
         <strong className={styles.name}>

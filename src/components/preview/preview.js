@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image/compat';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-import styles from './preview.module.css';
+import * as styles from './preview.module.css';
 
 function Preview({ excerpt, frontmatter, slug, wrapper: Wrapper = 'article' }) {
   return (
     <Wrapper className={styles.container}>
       {frontmatter.featured && (
         <div className={styles.featured}>
-          <GatsbyImage {...frontmatter.featured.childImageSharp} />
+          <GatsbyImage image={getImage(frontmatter.featured)} />
         </div>
       )}
       <h3 className={styles.title}>
@@ -28,9 +28,7 @@ export const blogPostPreviewFragment = graphql`
     frontmatter {
       featured {
         childImageSharp {
-          fluid(maxHeight: 400, cropFocus: NORTH) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FULL_WIDTH, height:400)
         }
       }
       title

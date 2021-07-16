@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { IoMdCopy } from 'react-icons/io';
 
 import { copyToClipboard } from '../../utils';
-import styles from './copy.module.css';
+import * as styles from './copy.module.css';
 
 const delay = (duration) =>
   new Promise((resolve) => setTimeout(resolve, duration));

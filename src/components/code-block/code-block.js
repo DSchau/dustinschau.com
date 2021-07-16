@@ -6,7 +6,7 @@ import { Copy } from '../copy';
 import { LazyHighlight } from '../lazy-highlight';
 import { normalize } from './normalize';
 
-import styles from './code-block.module.css';
+import * as styles from './code-block.module.css';
 
 const getParams = (name = ``) => {
   const [lang, params = ``] = name.split(`:`);

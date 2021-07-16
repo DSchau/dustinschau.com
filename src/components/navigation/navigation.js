@@ -6,7 +6,7 @@ import {
   IoLogoTwitter,
 } from 'react-icons/io';
 
-import styles from './navigation.module.css';
+import * as styles from './navigation.module.css';
 
 function Navigation({ className, ...props }) {
   return (
@@ -23,12 +23,11 @@ function Navigation({ className, ...props }) {
           ],
           /* TODO: blog, color mode */
         ].map(([text, link, Icon]) => (
-          <li key={text} className={styles.listItem}>
+          <li key={text}>
             <a
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className={styles.link}
               title={text}
             >
               <Icon className={styles.icon} />
