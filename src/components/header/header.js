@@ -17,6 +17,11 @@ const getParticlesConfig = (particlesConfig, options) => {
     config.particles.number.value = 10;
     config.particles.number.density.value_area = 100;
   }
+
+  config.style = {
+    position: 'absolute'
+  }
+
   return config;
 };
 
