@@ -5,7 +5,7 @@ tags:
   - tech stack
   - colophon
   - about
-featured: ui-and-code.png
+featured: ./ui-and-code.png
 excerpt: Welcome to the second version of my blog, powered by Gatsby, an incredible site generator. Learn more about the tech stack and things I built to power this blog.
 ---
 
