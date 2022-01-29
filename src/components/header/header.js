@@ -59,8 +59,7 @@ export function Header({ compressed = true, children }) {
 
         {!compressed && (
           <h2 className={styles.subTitle}>
-            Product Leader <span className={styles.ampersand}>&amp;</span>{' '}
-            Engineer
+            Engineering <span className={styles.ampersand}>&amp;</span> Product Leader
           </h2>
         )}
       </span>
