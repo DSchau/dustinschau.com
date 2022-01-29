@@ -5921,7 +5921,8 @@ __metadata:
     gatsby-transformer-sharp: ^4.6.0
     husky: ^7.0.1
     lint-staged: ^11.0.1
-    playwright: ^1.18.1
+    playwright-aws-lambda: ^0.7.0
+    playwright-core: ^1.18.1
     postcss: ^8.3.5
     prettier: ^2.3.2
     prism-react-renderer: ^1.2.1
@@ -9829,6 +9830,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lambdafs@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "lambdafs@npm:1.3.0"
+  dependencies:
+    tar-fs: ^2.0.0
+  bin:
+    lambdafs: bin/brotli.js
+  checksum: 6cd79b9a68e76ed720a4e7ab2b6cb3e13665b6e4e3a2ae780f4715602904271c713d960fbf7c1e98ec594ba0126f4ca47e98e0c2f2c4fc157439f5875d3a222c
+  languageName: node
+  linkType: hard
+
 "language-subtag-registry@npm:~0.3.2":
   version: 0.3.21
   resolution: "language-subtag-registry@npm:0.3.21"
@@ -12063,7 +12075,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"playwright-core@npm:=1.18.1":
+"playwright-aws-lambda@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "playwright-aws-lambda@npm:0.7.0"
+  dependencies:
+    lambdafs: ^1.3.0
+  peerDependencies:
+    playwright-core: ^1
+  checksum: 541e8dd6ccea7389ac6f6ac201146410cfe6e7d7bc36aecf8fef7d5647d6ccfb675d67749c4a649f575db0fd5f0918c23a1a1344384e5231498bbbfd381becc9
+  languageName: node
+  linkType: hard
+
+"playwright-core@npm:^1.18.1":
   version: 1.18.1
   resolution: "playwright-core@npm:1.18.1"
   dependencies:
@@ -12086,17 +12109,6 @@ __metadata:
   bin:
     playwright: cli.js
   checksum: 7b3d5a228bb0559eece28c82f6aa963a9f3cb68f56e470feb968fe414e4f0074edb9a2d9b27266f4927be31d57203cdfb739e57d5b30744d5f30800a8025b3b8
-  languageName: node
-  linkType: hard
-
-"playwright@npm:^1.18.1":
-  version: 1.18.1
-  resolution: "playwright@npm:1.18.1"
-  dependencies:
-    playwright-core: =1.18.1
-  bin:
-    playwright: cli.js
-  checksum: a50c4c3b04c0f4c2698898003b5cba8d24af0de01e13e9af754d34af4d928d5397704ab7e84a593fb614d538fe72e307f69f01971219857118cd619ee3f91c88
   languageName: node
   linkType: hard
 

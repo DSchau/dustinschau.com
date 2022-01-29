@@ -1,12 +1,10 @@
-import Playwright from 'playwright'
-
-const { chromium: browserInstance } = Playwright
+import { launchChromium } from 'playwright-aws-lambda'
 
 const NODE_ENV = process.env.NODE_ENV || 'production'
 
 export default async function PageToPDF(req, res) {
   const { path } = req.query
-  const browser = await browserInstance.launch();
+  const browser = await launchChromium();
   const context = await browser.newContext();
   const page = await context.newPage();
 
