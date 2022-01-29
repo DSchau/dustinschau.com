@@ -49,6 +49,7 @@ export default function Resume({ data }) {
           </ul>
         </div>
       </section>
+      <a href="/api/page-to-pdf?path=/resume/">Download PDF</a>
     </main>
   );
 }
