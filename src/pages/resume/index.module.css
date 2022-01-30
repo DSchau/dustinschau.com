@@ -2,6 +2,30 @@
   background-color: theme('colors.gray.100');
 }
 
+.resume {
+  padding: 1in;
+  position: relative;
+}
+
+.lastEdited {
+  position: absolute;
+  top: 0.25in;
+  right: 0.5in;
+
+  font-size: 12px;
+  color: #666
+}
+
+@media print {
+  .lastEdited {
+    display: none;
+  }
+
+  .resume {
+    padding: 0.5in;
+  }
+}
+
 .grid {
   display: flex;
   justify-content: space-between;

@@ -4,7 +4,9 @@ const NODE_ENV = process.env.NODE_ENV || 'production'
 
 export default async function PageToPDF(req, res) {
   const { path } = req.query
-  const browser = await launchChromium();
+  const browser = await launchChromium({
+    headless: true
+  });
   const context = await browser.newContext();
   const page = await context.newPage();
 
@@ -12,7 +14,7 @@ export default async function PageToPDF(req, res) {
 
   await page.goto([BASE_URL, path].join(''));
 
-  await page.emulateMedia({media: 'screen'});
+  await page.emulateMedia({ media: 'print' });
 
   const buffer = await page.pdf({
     format: 'Letter'

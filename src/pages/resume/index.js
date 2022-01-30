@@ -8,7 +8,8 @@ import * as styles from './index.module.css';
 
 export default function Resume({ data }) {
   return (
-    <main className={styles.main}>
+    <main className={styles.resume}>
+      <p className={styles.lastEdited}>Last Edited: January 29th, 2022</p>
       <section className={[styles.grid, styles.bio].join(' ')}>
         <div className={styles.cell}>
           <Box>Engineering &amp; Product Leader</Box>
