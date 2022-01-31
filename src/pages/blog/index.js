@@ -8,7 +8,7 @@ import { Preview } from '../../components/preview/';
 
 import * as sharedStyles from '../shared.module.css';
 
-export default function Blog ({ data }) {
+export default function Blog({ data }) {
   return (
     <Layout>
       <h2 className={sharedStyles.sectionTitle}>The Blog</h2>

@@ -1,6 +1,7 @@
 :root {
-  --sans-serif-stack: "Raleway", "Roboto", "Franklin Gothic Medium", Tahoma, sans-serif;
-  --serif-stack: "Hahmlet", "Trebuchet MS", sans-serif;
+  --sans-serif-stack: 'Raleway', 'Roboto', 'Franklin Gothic Medium', Tahoma,
+    sans-serif;
+  --serif-stack: 'Hahmlet', 'Trebuchet MS', sans-serif;
 }
 
 .print-hide {
@@ -12,7 +13,6 @@
     display: none !important;
   }
 }
-
 
 .subTitle {
   font-weight: bold;
@@ -40,4 +40,3 @@
   background-color: transparent;
   color: #222;
 }
-
