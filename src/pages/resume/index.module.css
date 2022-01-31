@@ -1,105 +1,23 @@
 :root {
   --sans-serif-stack: "Raleway", "Roboto", "Franklin Gothic Medium", Tahoma, sans-serif;
   --serif-stack: "Hahmlet", "Trebuchet MS", sans-serif;
-
 }
 
-:global(body) {
-  background-color: theme('colors.gray.100');
+.print-hide {
+  display: inline;
 }
 
-.main {
-  max-width: 8.5in;
-  margin: 0 auto;
-
-  font-family: var(--sans-serif-stack);
-}
-
-.grid {
-  display: flex;
-  justify-content: space-between;
-}
-
-.cell {
-  padding: 6px 12px;
-}
-
-.under {
-  text-decoration: underline;
-}
-
-.icon-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-@media only screen and (min-width: 768px) {
-  .name {
-    display: block;
+@media print {
+  .print-hide {
+    display: none !important;
   }
 }
 
-.icon {
-  display: inline-block;
-  padding-right: 2px;
-}
-
-.title {
-  font-weight: bold;
-  font-family: var(--serif-stack);
-  font-size: 48px;
-  line-height: 1.1;
-
-  padding-top: 0.125in;
-  padding-bottom: 0.125in;
-}
-
-.bio {
-  margin-left: 8px;
-  margin-right: 8px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid #ccc;
-}
-
-.bioText {
-  padding: 12px 2px;
-  font-size: 14px;
-}
-
-.image {
-  align-self: center;
-  filter: grayscale(1);
-  transition: filter 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.image img {
-  border-radius: 100%;
-}
-
-.image:hover {
-  filter: grayscale(0);
-}
 
 .subTitle {
   font-weight: bold;
   font-family: var(--serif-stack);
   font-size: 32px;
-}
-
-.experience {
-  padding-right: 16px;
-  border-right: 1px solid #ccc;
-}
-
-.details {
-  padding-left: 0.25in;
-  padding-right: 0.25in;
-  padding-top: 0.125in;
-}
-
-.small {
-  font-size: 12px;
-  text-transform: italic;
 }
 
 .downloadResume {
@@ -123,8 +41,3 @@
   color: #222;
 }
 
-@media print {
-  .downloadResume {
-    display: none;
-  }
-}

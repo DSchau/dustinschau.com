@@ -1,5 +1,5 @@
 .container {
-  padding: 0.125in 0;
+  padding: 0.075in 0;
   position: relative;
 }
 
@@ -27,7 +27,7 @@
 
 .description {
   font-size: 14px;
-  padding-bottom: 8px;
+  padding-bottom: 4px;
 }
 
 .list {

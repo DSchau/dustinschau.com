@@ -1,0 +1,14 @@
+.cover {
+}
+
+.cover p {
+  margin-bottom: 0.125in;
+  line-height: 1.25;
+
+  font-size: 14px;
+}
+
+.list li {
+  margin-left: 0.25in;
+  list-style-type: square;
+}

@@ -3,14 +3,14 @@ import format from 'date-fns/format'
 
 import * as styles from './experience.module.css'
 
-export default function Experience({ jobTitle, dates, employer, description, items }) {
+export default function Experience({ className, jobTitle, dates, employer, description, items }) {
   let formattedDates = dates.map(date => format(new Date(date), 'MMM yyyy'))
 
   if (formattedDates.length === 1) {
     formattedDates = formattedDates.concat('Present')
   }
   return (
-    <section className={styles.container}>
+    <section className={[styles.container, className].filter(Boolean).join(' ')}>
       <h4 className={styles.employer}>{employer}</h4>
       <h3 className={styles.title}>{jobTitle} <span className={styles.date}>{formattedDates[0]} &mdash; {formattedDates[1]}</span></h3>
       <p className={styles.description}>{description}</p>
