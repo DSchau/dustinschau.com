@@ -6,12 +6,12 @@ import * as styles from './experience.module.css';
 export default function Experience({
   className,
   jobTitle,
-  dates,
+  dates = [],
   employer,
   description,
   items,
 }) {
-  let formattedDates = dates.map((date) => format(new Date(date), 'MMM yyyy'));
+  let formattedDates = (dates || []).map((date) => format(new Date(date), 'MMM yyyy'));
 
   if (formattedDates.length === 1) {
     formattedDates = formattedDates.concat('Present');
