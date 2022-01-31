@@ -56,7 +56,7 @@ export default function CoverLetter({ data }) {
               broader Engineering team of 30. By weaving in my experience of
               first doing the work, then enabling others to do the work, then
               inspiring the teams to do the work best, the chief lesson I’ve
-              learned is to lead with kindness and make others yearn for the
+              learned is to lead with kindness and help inspire others to yearn for the
               glorious future.
             </li>
           </ul>
@@ -65,8 +65,8 @@ export default function CoverLetter({ data }) {
           All this to say, I believe this intersection of Product, Design,
           Engineering and the experiences I’ve had in wearing many hats,
           empathizing and understanding each, has prepared me to wear the one
-          that I believe I can wear uniquely best, do the best work of my
-          career, and I believe that future is at {companyName}. I couldn’t be
+          that I believe I can wear uniquely best and do the best work of my
+          career. I believe that best work is at {companyName}. I couldn’t be
           more excited about the opportunity to help the team achieve its
           mission to unlock the potential of the fully distributed future where
           every person and business truly belongs.

@@ -23,7 +23,7 @@ export default function Resume({ data }) {
         jobTitle="VP of Engineering"
         employer="Gatsby, Inc. • Fully Remote"
         dates={[new Date('08/01/2021')]}
-        description="Leads the 30+ engineering team building the fastest web framework for the headless web."
+        description="Leads a team of 30+ engineers building the fastest web framework for the headless web."
         items={[
           'Launched Gatsby 4, our most fully featured release yet with game-changing features resulting in wide adoption and 10x reduced build speeds',
           'Built out management layer and increased total engineering staffing by 25% in one quarter',
@@ -33,7 +33,7 @@ export default function Resume({ data }) {
         jobTitle="VP of Product"
         employer="Gatsby, Inc. • Fully Remote"
         dates={[new Date('09/01/2018'), new Date('07/31/2021')]}
-        description="Joined as the 11th employee at Gatsby as an engineer, and built and founded the Product team at Gatsby."
+        description="Joined as the 11th employee at Gatsby as an engineer, and built, founded, and helped enable the maximal impact of the Product team at Gatsby."
         items={[
           'Established Product Council, a quarterly planning and collaborative process wherein top-down strategy from key business leaders and self-directing squads are blended to deliver strategically valuable Product offerings',
           'Grew the Product team from 1 to 8 (including Design), and organized the teams into cross-functional squads',
