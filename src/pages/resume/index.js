@@ -11,7 +11,13 @@ import Experience from './experience';
 
 export default function Resume({ data }) {
   return (
-    <ResumeLayout>
+    <ResumeLayout       download={(props) => (
+      <a
+        {...props}
+        href="/api/page-to-pdf?path=/resume/&amp;title=dustin-schau-resume.pdf"
+      >
+        Download PDF
+      </a>)}>
       <h2 className={styles.subTitle}>Experience</h2>
       <Experience
         jobTitle="VP of Engineering"
