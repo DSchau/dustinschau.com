@@ -51,7 +51,6 @@ module.exports = {
             options: {
               usePrefix: false,
               providers: {
-                include: ['Twitter'],
                 settings: {
                   Twitter: {
                     theme: 'dark', // Use the Twitter dark theme

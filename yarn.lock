@@ -1497,6 +1497,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/hahmlet@npm:^4.5.5":
+  version: 4.5.5
+  resolution: "@fontsource/hahmlet@npm:4.5.5"
+  checksum: 94881a2564c15d91d1ed31a5f12b7b610b00b396d3abd8a866038aec46e963558fe54686ec06a38ce96d75c97f2bfbac580e719b2b62129cf55e351207b0a6e1
+  languageName: node
+  linkType: hard
+
+"@fontsource/raleway@npm:^4.5.1":
+  version: 4.5.1
+  resolution: "@fontsource/raleway@npm:4.5.1"
+  checksum: 68bbc6a611d20f84cd4d40117eb40bf5d32dac238bc47c04e968120865185e1167e55b18de9c30f7532d9e1a136a4c6287ca70c1ee93943b3d7e97cb35816ef4
+  languageName: node
+  linkType: hard
+
 "@gar/promisify@npm:^1.0.1":
   version: 1.1.2
   resolution: "@gar/promisify@npm:1.1.2"
@@ -5379,7 +5393,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:^2.25.0":
+"date-fns@npm:^2.25.0, date-fns@npm:^2.28.0":
   version: 2.28.0
   resolution: "date-fns@npm:2.28.0"
   checksum: a0516b2e4f99b8bffc6cc5193349f185f195398385bdcaf07f17c2c4a24473c99d933eb0018be4142a86a6d46cb0b06be6440ad874f15e795acbedd6fd727a1f
@@ -5885,6 +5899,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "dustinschau.com@workspace:."
   dependencies:
+    "@fontsource/hahmlet": ^4.5.5
+    "@fontsource/raleway": ^4.5.1
     "@loadable/component": ^5.15.2
     "@mdx-js/mdx": ^1.6.22
     "@mdx-js/react": ^1.6.22
@@ -5892,6 +5908,7 @@ __metadata:
     "@reach/skip-nav": ^0.16.0
     "@tailwindcss/typography": 0.4.1
     autoprefixer: ^10.4.2
+    date-fns: ^2.28.0
     gatsby: ~4.5.0
     gatsby-image: ^3.11.0
     gatsby-plugin-image: ^2.6.0
@@ -5912,7 +5929,7 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
     react-helmet: ^6.1.0
-    react-icons: ^4.2.0
+    react-icons: ^4.3.1
     remark-unwrap-images: ^2.1.0
     tailwindcss: ^2.2.4
     tsparticles: ^1.31.1
@@ -12943,7 +12960,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-icons@npm:^4.2.0":
+"react-icons@npm:^4.3.1":
   version: 4.3.1
   resolution: "react-icons@npm:4.3.1"
   peerDependencies:
