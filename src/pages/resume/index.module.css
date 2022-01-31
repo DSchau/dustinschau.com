@@ -1,5 +1,18 @@
+:root {
+  --sans-serif-stack: "Raleway", "Roboto", "Franklin Gothic Medium", Tahoma, sans-serif;
+  --serif-stack: "Hahmlet", "Trebuchet MS", sans-serif;
+
+}
+
 :global(body) {
   background-color: theme('colors.gray.100');
+}
+
+.main {
+  max-width: 8.5in;
+  margin: 0 auto;
+
+  font-family: var(--sans-serif-stack);
 }
 
 .grid {
@@ -11,10 +24,18 @@
   padding: 6px 12px;
 }
 
+.under {
+  text-decoration: underline;
+}
+
 .title {
   font-weight: bold;
-  font-family: serif;
+  font-family: var(--serif-stack);
   font-size: 48px;
+  line-height: 1.1;
+
+  padding-top: 0.125in;
+  padding-bottom: 0.125in;
 }
 
 .bio {
@@ -45,7 +66,7 @@
 
 .subTitle {
   font-weight: bold;
-  font-family: serif;
+  font-family: var(--serif-stack);
   font-size: 32px;
 }
 
@@ -54,7 +75,40 @@
   border-right: 1px solid #ccc;
 }
 
+.details {
+  padding-left: 0.25in;
+  padding-right: 0.25in;
+  padding-top: 0.125in;
+}
+
 .small {
   font-size: 12px;
   text-transform: italic;
+}
+
+.downloadResume {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 0.125in 0;
+  padding: 0.125in 0.25in;
+
+  background-color: #222;
+  color: #eee;
+  border: 2px solid transparent;
+  font-weight: bold;
+
+  transition: all 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.downloadResume:hover {
+  border-color: #222;
+  background-color: transparent;
+  color: #222;
+}
+
+@media print {
+  .downloadResume {
+    display: none;
+  }
 }
