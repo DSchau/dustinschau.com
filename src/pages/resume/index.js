@@ -14,7 +14,7 @@ export default function Resume({ data }) {
     <ResumeLayout       download={(props) => (
       <a
         {...props}
-        href="/api/page-to-pdf?path=/resume/&amp;title=dustin-schau-resume.pdf"
+        href="/api/page-to-pdf?path=/resume/&amp;fileName=dustin-schau-resume.pdf"
       >
         Download PDF
       </a>)}>

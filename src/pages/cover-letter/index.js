@@ -13,7 +13,7 @@ export default function CoverLetter({ data }) {
       download={(props) => (
         <a
           {...props}
-          href="/api/page-to-pdf?path=/cover-letter/&amp;title=dustin-schau-cover-letter.pdf"
+          href="/api/page-to-pdf?path=/cover-letter/&amp;fileName=dustin-schau-cover-letter.pdf"
         >
           Download PDF
         </a>
