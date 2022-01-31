@@ -7,7 +7,7 @@ import ResumeLayout from '../../components/resume-layout/resume-layout';
 import * as styles from './index.module.css';
 
 export default function CoverLetter({ data }) {
-  const companyName = 'Remote';
+  const companyName = 'Gatsby';
   return (
     <ResumeLayout
       download={(props) => (
