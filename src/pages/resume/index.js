@@ -2,6 +2,8 @@ import React from 'react';
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
+import { FiPhone, FiHome, FiMail, FiLink, FiLinkedin, FiGithub } from 'react-icons/fi'
+
 import '@fontsource/raleway'
 import '@fontsource/hahmlet'
 
@@ -9,6 +11,7 @@ import * as styles from './index.module.css';
 
 import Box from './box'
 import Experience from './experience'
+import Skill from './skill'
 
 export default function Resume({ data }) {
   return (
@@ -34,23 +37,24 @@ export default function Resume({ data }) {
             dates={[
               new Date('08/01/2021')
             ]}
-            description="Leads the 30+ Engineering building the fastest web framework for the headless web"
+            description="Leads the 30+ engineering team building the fastest web framework for the headless web"
             items={[
               'Launched Gatsby 4, our most fully featured release yet with game-changing features like DSG (deferred static generation) and SSR (server-side rendering)',
-              'Did another thing'
+              'Launched new Hosting product, a best-in-class CDN customized to key performance metrics for the Gatsby user',
+              'Built out management layer and increased total engineering staffing by 25% in one quarter'
             ]}
           />
           <Experience
             jobTitle="VP of Product"
             employer="Gatsby, Inc. • Fully Distributed"
             dates={[
-              new Date('12/01/2019'),
+              new Date('09/01/2018'),
               new Date('07/31/2021')
             ]}
             description="Joined as the 11th employee at Gatsby as an engineer, and built and founded the Product team at Gatsby"
             items={[
               'Helped establish and implement product vision and helped build an open-core business model which increased revenue from $400K to $2.5M ARR',
-              'Established Product Council, a quarterly planning and collaborative process wherein top-down strategy and autonomy are blended to empower teams to deliver strategically valuable product offerings',
+              'Established Product Council, a quarterly planning and collaborative process wherein top-down strategy from key business leaders and self-directing squads are blended to deliver strategically valuable Product offerings',
               'Grew the Product team from 1 to 8 (including Design), and organized the teams into cross-functional squads composed of Product, Engineering, and Design'
             ]}
           />
@@ -59,12 +63,12 @@ export default function Resume({ data }) {
             employer="Object Partners • Omaha, Nebraska"
             dates={[
               new Date('05/01/2016'),
-              new Date('07/01/2018')
+              new Date('09/01/2018')
             ]}
-            description="Serve as a technical consultant to assist teams, companies, and organizations by assisting and leading developmental efforts, improving in-house developer knowledge, and establishing best practices."
+            description="Served as a technical consultant to assist teams, companies, and organizations by assisting and leading developmental efforts, improving in-house developer knowledge, and establishing best practices."
             items={[
-              'Implented quarterly planning process and high-level key-product themes',
-              'Helped establish product vision and market to increase revenue from $400K to $2.5M ARR'
+              'Built a native, cross-platform messaging app used by 10K monthly active users',
+              'Recommended and re-platformed technology stack for a Fortune 1000 company to React and React Native'
             ]}
           />
           <Experience
@@ -82,34 +86,27 @@ export default function Resume({ data }) {
           />
         </div>
         <div className={styles.details}>
-          <Box>Contact Info</Box>
-          <ul>
-            <li>dustinschau@gmail.com</li>
-            <li>712.212.3001</li>
-            <li>dustinschau.com</li>
-            <li>San Francisco, CA</li>
-          </ul>
-          <Box>Education</Box>
-          <ul>
-            <li><strong>2009 &ndash; 2013</strong></li>
-            <li>Creighton University</li>
-            <li>Computer Science</li>
-            <li className={styles.small}>3.85 GPA, Summa Cum Laude</li>
-          </ul>
-          <Box>Skills</Box>
-          <ul>
-            <li>Building Teams</li>
-            <li>Scaling Product Delivery</li>
-            <li>Hyper-growth Startups</li>
-            <li>Leading with Kindness</li>
-          </ul>
-          {/* <Box>Side Projects</Box>
-          <ul>
-            <li>CSS in JS Playground</li>
-            <li>Algorithm Playground</li>
-            <li>CSS in JS Podcast with Chris Coyier</li>
-            <li>Leading with Kindness</li>
-          </ul> */}
+          <Skill title="Contact" items={[
+            <a className={styles.iconLink} href="mailto:dustinschau@gmail.com"><FiMail className={styles.icon} />dustinschau@gmail.com</a>,
+            <span><FiPhone className={styles.icon} />712.212.3001</span>,
+            <a className={styles.iconLink} href="https://dustinschau.com"><FiLink className={styles.icon} />dustinschau.com</a>,
+            <a className={styles.iconLink} href="https://www.linkedin.com/in/dschau/"><FiLinkedin className={styles.icon} />linkedin.com/in/dschau</a>,
+            <a className={styles.iconLink} href="https://www.github.com/dschau"><FiGithub className={styles.icon} />github.com/dschau</a>,
+            <span><FiHome className={styles.icon} />San Francisco, CA</span>,
+          ]} />
+          <Skill title="Education" items={[
+            <strong>2009 &ndash; 2013</strong>,
+            'Creighton University',
+            'B.S. in Computer Science',
+            <span className={styles.small}>3.85 GPA, Summa Cum Laude</span>
+          ]} />
+          <Skill title="Skills" items={[
+            'Building empowered teams',
+            'Scaling Product delivery',
+            'Hyper-growth startups',
+            'Building empowered teams',
+            'Leading with kindness'
+          ]} />
         </div>
       </section>
       <a className={styles.downloadResume} href="/api/page-to-pdf?path=/resume/">Download PDF</a>

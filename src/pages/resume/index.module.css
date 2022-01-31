@@ -28,6 +28,22 @@
   text-decoration: underline;
 }
 
+.icon-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media only screen and (min-width: 768px) {
+  .name {
+    display: block;
+  }
+}
+
+.icon {
+  display: inline-block;
+  padding-right: 2px;
+}
+
 .title {
   font-weight: bold;
   font-family: var(--serif-stack);
