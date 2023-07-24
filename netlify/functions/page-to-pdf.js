@@ -2,7 +2,7 @@ import { launchChromium } from 'playwright-aws-lambda'
 
 const NODE_ENV = process.env.NODE_ENV || 'production'
 
-export default async function PageToPDF(event) {
+export const handler = async function PageToPDF(event) {
   const { path } = event.queryStringParameters
   const browser = await launchChromium({
     headless: true
