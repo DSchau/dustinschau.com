@@ -10,7 +10,7 @@ export default async function PageToPDF(event) {
   const context = await browser.newContext();
   const page = await context.newPage();
 
-  const BASE_URL = NODE_ENV === 'production' ? 'https://dustinschau.com' : 'http://localhost:8000'
+  const BASE_URL = NODE_ENV === 'production' ? 'https://main--taupe-nougat-8aa35b.netlify.app' : 'http://localhost:8000'
 
   await page.goto([BASE_URL, path].join(''));
 
